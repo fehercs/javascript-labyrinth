@@ -24,7 +24,7 @@ export default class MazeSolver {
     }
   };
 
-  _getPath = (position, end) => {
+  _getShortestPath = (position, end) => {
     const queue = [];
     this.matrix[position[0]][position[1]] = 1;
     queue.push([position]);
@@ -58,7 +58,7 @@ export default class MazeSolver {
 
   solve = (grid) => {
     this.matrix = JSON.parse(JSON.stringify(grid));
-    const path = this._getPath(this._getStart(), this._getEnd());
+    const path = this._getShortestPath(this._getStart(), this._getEnd());
     for (let i = 1; i < path.length - 1; i++) {
       const [y, x] = path[i];
       grid[y][x] = PATH_CHAR;
