@@ -2,7 +2,7 @@ const PATH_CHAR = '.';
 const EMPTY_CHAR = ' ';
 
 export default class MazeSolver {
-  constructor(grid) {
+  constructor() {
     this.matrix = [];
   }
 
