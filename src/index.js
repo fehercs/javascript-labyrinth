@@ -66,8 +66,8 @@ const drawMaze = () => {
 };
 
 const main = () => {
-  const rows = parseInt(getUserInput('Enter number of rows:\n'));
-  const cols = parseInt(getUserInput('Enter number of collumns:\n'));
+  const rows = Math.abs(parseInt(getUserInput('Enter number of rows:\n')));
+  const cols = Math.abs(parseInt(getUserInput('Enter number of collumns:\n')));
   maze = new Maze({ rows: rows || 3, cols: cols || 3 });
   canvas = getCanvas();
   fillMaze();
